@@ -51,11 +51,23 @@
 				<nav id="main-nav">
 					
 					<ul class="clearfix">
-						<li><a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow">Seu Carrinho (${carrinhoCompras.quantidade })</a></li>
-
-						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">Sobre Nós</a></li>
-
-						<li><a href="/pages/perguntas-frequentes" rel="nofollow">Perguntas Frequentes</a></li>
+						<li><a href="${s:mvcUrl('CCC#itens').build()}" rel="nofollow">
+							<!-- 
+							<fmt:message key="menu.carrinho">
+								<fmt:param value="${carrinhoCompras.quantidade }"/>
+							</fmt:message>
+							 -->
+							<s:message code="menu.carrinho" arguments="${carrinhoCompras.quantidade }"/>
+							</a></li>
+						<li><a href="/pages/sobre-a-casa-do-codigo" rel="nofollow">
+							<fmt:message key="menu.sobre"/> 
+						</a></li>
+						<li><a href="?locale=pt" rel="nofollow">
+							<fmt:message key="menu.pt"/> 
+						</a></li>
+						<li><a href="?locale=en_US" rel="nofollow">
+							<fmt:message key="menu.en"/> 
+						</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -63,19 +75,30 @@
 	</header>
 	<nav class="categories-nav">
 		<ul class="container">
-			<li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+			<li class="category"><a href="http://www.casadocodigo.com.br">
+				<fmt:message key="navegacao.categoria.home"></fmt:message>
+			</a></li>
 			<li class="category"><a href="/collections/livros-de-agile">
-					Agile </a></li>
+				<fmt:message key="navegacao.categoria.agile"></fmt:message> 
+			</a></li>
 			<li class="category"><a href="/collections/livros-de-front-end">
-					Front End </a></li>
+				<fmt:message key="navegacao.categoria.front_end"></fmt:message> 
+			</a></li>
 			<li class="category"><a href="/collections/livros-de-games">
-					Games </a></li>
+				<fmt:message key="navegacao.categoria.games"></fmt:message> 
+			</a></li>
 			<li class="category"><a href="/collections/livros-de-java">
-					Java </a></li>
+				<fmt:message key="navegacao.categoria.java"></fmt:message> 
+			</a></li>
 			<li class="category"><a href="/collections/livros-de-mobile">
-					Mobile </a></li>
+				<fmt:message key="navegacao.categoria.mobile"></fmt:message>
+			</a></li>
 			<li class="category"><a
-				href="/collections/livros-desenvolvimento-web"> Web </a></li>
-			<li class="category"><a href="/collections/outros"> Outros </a></li>
+				href="/collections/livros-desenvolvimento-web">
+				<fmt:message key="navegacao.categoria.web"></fmt:message> 
+			</a></li>
+			<li class="category"><a href="/collections/outros"> 
+				<fmt:message key="navegacao.categoria.outros"></fmt:message> 
+			</a></li>
 		</ul>
 	</nav>
